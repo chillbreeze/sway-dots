@@ -1,0 +1,72 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 30,
+    "spacing": 0,
+    "modules-left": ["sway/workspaces","sway/mode"],
+    "modules-center": ["custom/clock"],
+    "modules-right": ["cpu", "memory", "temperature", "battery", "tray"],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "format": "{name}"
+    },
+
+    "sway/mode": {
+        "format": "  {}"
+    },
+
+    "custom/clock": {
+        "format": "{}",
+        "exec": "date +'%a %b %-d %-I:%M %p'",
+        "interval": 3
+    },
+
+    "sway/language": {
+        "format": "<span color='#252525'>[ </span><span color='#afa193'><b>key: </b></span>{short}<span color='#252525'> / </span>",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "<span color='#afa193'><b>vol:</b></span> {volume}%",
+        "format-muted": "<span color='#afa193'><b>vol:</b></span> {volume}% (m)"
+    },
+    
+    "cpu": {
+        "format": "<span color='#afa193'><b>cpu:</b></span> <span color='#5b8c6e'>{usage}%</span>",
+        "tooltip": false,
+        "interval": 3
+    },
+
+    "memory": {
+        "format": "<span color='#252525'> / </span><span color='#afa193'><b>mem:</b></span> <span color='#5b8c6e'>{percentage}%</span>",
+        "tooltip": false,
+        "interval": 5
+    },
+
+    "temperature": {
+        "format": "<span color='#252525'> / </span><span color='#afa193'><b>tmp:</b></span> <span color='#5b8c6e'>{temperatureC}°</span>",
+        "format-critical": "<span color='#252525'> / </span><span color='#ff6b6b'><b>tmp:</b></span> <span color='#5b8c6e'>{temperatureC}°</span>",
+        "critical-threshold": 80,
+        "tooltip": false,
+        "interval": 5
+    },
+
+    "battery": {
+        "format": "<span color='#252525'> / </span><span color='#afa193'><b>bat:</b></span> <span color='#5b8c6e'>{capacity}%</span>",
+        "format-charging": "<span color='#252525'> / </span><span color='#afa193'><b>ac:</b></span> <span color='#5b8c6e'>{capacity}%</span>",
+        "tooltip": false,
+        "interval": 20
+    },
+
+    "backlight": {
+        "format": "<span color='#252525'> / </span><span color='#afa193'><b>mon:</b></span> {percent}%<span color='#252525'> ]</span>",
+        "tooltip": false
+    },
+    
+    "tray": {
+        "icon-size": 20,
+        "spacing": 7,
+        "tooltip": false
+    }
+}
